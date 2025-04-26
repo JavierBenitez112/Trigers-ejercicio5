@@ -1,0 +1,107 @@
+-- Insertar Temáticas
+INSERT INTO Tematica (nombre) VALUES 
+('Fiesta de los 80s'),
+('Medieval'),
+('Playa'),
+('Cine'),
+('Disfraces');
+
+-- Insertar Usuarios
+INSERT INTO Usuario (nombre, telefono, correo) VALUES
+('Ana Pérez', '555-1234', 'ana@example.com'),
+('Luis Gómez', '555-5678', 'luis@example.com'),
+('María López', '555-8765', 'maria@example.com'),
+('Carlos Díaz', '555-4321', 'carlos@example.com'),
+('Sofía Ruiz', '555-6789', 'sofia@example.com'),
+('Pedro Castillo', '555-3456', 'pedro@example.com'),
+('Laura Martínez', '555-6543', 'laura@example.com'),
+('Miguel Torres', '555-7890', 'miguel@example.com'),
+('Valentina Mora', '555-0987', 'valentina@example.com'),
+('Diego Herrera', '555-2109', 'diego@example.com');
+
+-- Insertar Artículos
+INSERT INTO Articulo (nombre, precio, cantidad, categoria, id_tematica) VALUES
+('Globo Neón', 5.99, 100, 'Decoración', 1),
+('Sombrero Medieval', 12.50, 50, 'Accesorios', 2),
+('Sombrilla de Playa', 25.00, 30, 'Utilería', 3),
+('Vasos de Película', 8.00, 80, 'Vajilla', 4),
+('Disfraz de Pirata', 35.00, 20, 'Ropa', 5),
+('Lentes Neón', 7.50, 100, 'Accesorios', 1),
+('Espada de Juguete', 15.00, 40, 'Accesorios', 2),
+('Pelota de Playa', 10.00, 60, 'Juguetes', 3),
+('Manteles de Cine', 9.50, 70, 'Decoración', 4),
+('Máscara de Superhéroe', 20.00, 25, 'Accesorios', 5),
+('Collares Fluorescentes', 4.00, 120, 'Accesorios', 1),
+('Copa Medieval', 18.00, 45, 'Vajilla', 2),
+('Camiseta Playera', 22.00, 35, 'Ropa', 3),
+('Centro de Mesa Hollywood', 14.00, 50, 'Decoración', 4),
+('Capa de Vampiro', 30.00, 15, 'Ropa', 5);
+
+-- Insertar Transacciones (Pedidos)
+INSERT INTO Transaccion (id_usuario, fecha, estado) VALUES
+(1, NOW(), 'Pendiente'),
+(2, NOW(), 'Enviado'),
+(3, NOW(), 'Pendiente'),
+(4, NOW(), 'Cancelado'),
+(5, NOW(), 'Enviado'),
+(6, NOW(), 'Pendiente'),
+(7, NOW(), 'Entregado'),
+(8, NOW(), 'Pendiente'),
+(9, NOW(), 'Enviado'),
+(10, NOW(), 'Entregado'),
+(1, NOW(), 'Pendiente'),
+(2, NOW(), 'Pendiente'),
+(3, NOW(), 'Pendiente'),
+(4, NOW(), 'Enviado'),
+(5, NOW(), 'Entregado'),
+(6, NOW(), 'Pendiente'),
+(7, NOW(), 'Pendiente'),
+(8, NOW(), 'Cancelado'),
+(9, NOW(), 'Pendiente'),
+(10, NOW(), 'Enviado'),
+(1, NOW(), 'Entregado'),
+(2, NOW(), 'Pendiente'),
+(3, NOW(), 'Pendiente'),
+(4, NOW(), 'Pendiente'),
+(5, NOW(), 'Cancelado'),
+(6, NOW(), 'Enviado'),
+(7, NOW(), 'Pendiente'),
+(8, NOW(), 'Pendiente'),
+(9, NOW(), 'Entregado'),
+(10, NOW(), 'Pendiente');
+
+-- Insertar Detalles de Transacción
+INSERT INTO DetalleTransaccion (id_transaccion, id_articulo, cantidad, precio_unitario) VALUES
+(1, 1, 2, 5.99),
+(1, 6, 1, 7.50),
+(2, 2, 1, 12.50),
+(2, 7, 2, 15.00),
+(3, 3, 1, 25.00),
+(4, 4, 4, 8.00),
+(5, 5, 1, 35.00),
+(6, 8, 3, 10.00),
+(7, 9, 2, 9.50),
+(8, 10, 1, 20.00),
+(9, 11, 5, 4.00),
+(10, 12, 2, 18.00),
+(11, 13, 1, 22.00),
+(12, 14, 1, 14.00),
+(13, 15, 2, 30.00),
+(14, 1, 3, 5.99),
+(15, 2, 2, 12.50),
+(16, 3, 1, 25.00),
+(17, 4, 3, 8.00),
+(18, 5, 1, 35.00),
+(19, 6, 2, 7.50),
+(20, 7, 1, 15.00),
+(21, 8, 2, 10.00),
+(22, 9, 1, 9.50),
+(23, 10, 1, 20.00),
+(24, 11, 4, 4.00),
+(25, 12, 2, 18.00),
+(26, 13, 1, 22.00),
+(27, 14, 2, 14.00),
+(28, 15, 1, 30.00),
+(29, 1, 1, 5.99),
+(30, 2, 1, 12.50);
+
